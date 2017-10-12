@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui"
+	  xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>GRUD</title>
+	<h:outputStylesheet />
+		<style>
+		html * {
+			font-family: Helvetica !important;
+		}
+		.ui-button {
+  			padding: 5px 5px;
+  			font-size: 15px;
+ 			text-align: center;
+ 			color: black;
+ 	 		background-color: #cccccc;
+		}
+		.ui-g{
+			padding: 5px
+		}
+</style>
+</h:head>
+<h:body>
+	<div class="ui-g">
+		<div class="ui-g-1">
+			<h1>Matthias Pleyer JEE CRUD-Functionality</h1>
+		</div>
+	</div>
+	<div class="ui-g">
+		<div class="ui-g-4">
+			<p:button value="Benutzer erstellen" ajax="false" outcome="erstellen" style="width: 12%" /><p></p>
+			<p:button value="Benutzer auflisten" ajax="false" outcome="lesen" style="width: 12%" /><p></p>
+			<p:button value="Benutzer löschen" ajax="false" outcome="loeschen" style="width: 12%" /><p></p>
+			<p:button value="Benutzer aktualisieren" ajax="false" outcome="aktualisieren" style="width: 12%" /><p></p>
+		</div>
+	</div>
+</h:body>
+</html>

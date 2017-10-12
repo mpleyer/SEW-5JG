@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui"
+	  xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Erstellen</title>
+	<h:outputStylesheet/>
+	<style>
+		html * {
+			font-family: Helvetica !important;
+		}
+		.ui-button {
+  			padding: 5px 5px;
+  			font-size: 15px;
+ 			text-align: center;
+ 			color: black;
+ 	 		background-color: #cccccc;
+		}
+		.ui-g{
+			padding: 5px
+		}
+</style>
+</h:head>
+<h:body>
+	<div class="ui-g">
+		<div class="ui-g-12">
+			<h1>Benutzer erstellen</h1>
+			<h3>Fügen Sie die Werte ein um einen Benutzer zu erstellen</h3>
+		</div>
+	</div>
+
+	<div class="ui-g">
+		<div class="ui-g-12">
+			<h:outputText value="#{benutzerErstellen.status}" />
+		</div>
+	</div>
+
+	<h:form id="form">
+		<div class="ui-g">
+			<div class="ui-g-2">Vorname:</div>
+			<div class="ui-g-2">
+				<p:inputText id="vorname" value="#{benutzerErstellen.vorname}"
+					label="vorname" style="width: 12%" />
+			</div>
+		</div>
+		
+		<div class="ui-g">
+			<div class="ui-g-2">Nachname:</div>
+			<div class="ui-g-2">
+				<p:inputText id="nachname" value="#{benutzerErstellen.nachname}"
+					label="nachname" style="width: 12%" />
+			</div>
+		</div>
+		
+		<div class="ui-g">
+			<div class="ui-g-2">Alter:</div>
+			<div class="ui-g-2">
+				<p:inputText id="benalter" value="#{benutzerErstellen.benalter}"
+					label="benalter" style="width: 12%">
+					<f:validateLongRange minimum="0" maximum="999" />
+				</p:inputText>
+			</div>
+		</div>
+		
+		<div class="ui-g">
+			<div class="ui-g-12">
+				<p:commandButton value="Person hinzufügen" ajax="false"
+					action="#{benutzerErstellen.erstelleBenutzer}" style="width: 15%" />
+				<p:button value="Zurück zum Menü" ajax="false" outcome="index"
+					style="width: 15%" />
+			</div>
+		</div>
+	</h:form>
+</h:body>
+</html>
